@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import InputBox from './InputBox.tsx';
+import store from './store.ts';
+import { Provider } from 'react-redux';
+import PlayerComponent from './PlayerComponent.js';
+import ReplayButton from './ReplayButton.tsx';
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+      <div className="controls">
+        <InputBox />
+        <ReplayButton />
+      </div>
+      <div className="player">
+        <PlayerComponent />
+      </div>
+      </Provider>
     </div>
   );
 }

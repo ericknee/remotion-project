@@ -1,5 +1,13 @@
 .App {
+  flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  height: 90vh;
+  width: 90vw;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .App-logo {
@@ -26,6 +34,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.player {
+  border: 2px solid black;
+  padding: 10px;
+  flex: 1;
+}
+
+.controls {
+  .controls {
+    background-color: white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 }
 
 @keyframes App-logo-spin {
