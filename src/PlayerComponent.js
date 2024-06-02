@@ -4,6 +4,7 @@ import { Player } from '@remotion/player';
 import { useSelector } from 'react-redux';
 import { HelloWorld, myCompSchema } from './HelloWorld.tsx';
 
+
 const PlayerComponent = () => {
   const inputValue = useSelector((state) => state.inputValue);
   const replay = useSelector((state) => state.replay);
@@ -25,7 +26,7 @@ const PlayerComponent = () => {
       }}
       ref={(ref) => (playerRef.current = ref)}
       component={HelloWorld}
-      durationInFrames={120}
+      durationInFrames={180}
       fps={30}
       compositionWidth={1920}
       compositionHeight={1080}
